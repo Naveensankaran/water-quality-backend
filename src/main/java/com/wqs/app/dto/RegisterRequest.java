@@ -1,26 +1,12 @@
-package com.wqs.app.entity;
+package com.wqs.app.dto;
 
-import jakarta.persistence.*;
-@Entity
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class RegisterRequest {
 
     private String username;
     private String password;
-    private String role;
+    private String role; // ADMIN / USER
 
-    public User() { }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    public RegisterRequest() {}
 
     public String getUsername() {
         return username;

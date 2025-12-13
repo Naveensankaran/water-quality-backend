@@ -1,12 +1,11 @@
 package com.wqs.app.dto;
 
-import lombok.Data;
 
-@Data
 public class WaterRequest {
     private double ph;
     private double turbidity;
     private double tds;
+    private String location;
     private double temperature;
 	public WaterRequest() {
 		super();
@@ -36,5 +35,12 @@ public class WaterRequest {
 	public void setTemperature(double temperature) {
 		this.temperature = temperature;
 	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	
     
 }
